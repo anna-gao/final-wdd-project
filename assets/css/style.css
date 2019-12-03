@@ -246,7 +246,6 @@ h2 {
 /* style the boxes */
 .grid-item-wrapper {
     -webkit-box-sizing: initial;
-    -moz-box-sizing: initial;
     box-sizing: initial;
     background-color: #88a0a8;
     border-radius: 8px;
