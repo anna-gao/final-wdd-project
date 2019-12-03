@@ -1,0 +1,383 @@
+html,body { 
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: Y-scroll;
+}
+
+p {
+    font-family:'Ubuntu', sans-serif;
+    font-size: 14pt;
+    line-height: 30px;
+}
+/* header aka navigation bar */
+
+.txt {
+    font-size: 20px;
+    color: #fff;
+    font-family:'Ubuntu', sans-serif;
+}
+
+.title {
+    font-size: 35px;
+    font-family:'Ubuntu', sans-serif;
+    display: inline-block;
+    vertical-align: center;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    padding-top: 5px;
+}
+
+ul {
+    list-style-type: none; 
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+li {
+    display: inline;
+    text-decoration: none;
+}
+
+.nav-item > a {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-item > a:hover {
+    color: #000;
+}
+
+.nav-item > a:before {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 2.7px;
+    bottom: 0;
+    left: 0;
+    background-color: #88a0a8;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-item > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    float: right;
+    overflow: hidden;
+    display:inline-block;
+    vertical-align:center;
+    padding-top: 15px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #000;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.spacing {
+    padding-left: 50px;
+}
+
+.nav-bar ul{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.navigation{
+    padding: 12px 45px;
+}
+
+/* home body */
+.body-area {
+    padding-top: 100px;
+    padding-bottom: 389px;
+    position: relative;
+    text-align: center;
+    background: linear-gradient(-45deg, #8FBC8B, #326690, #88a0a8, #666666);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+#intro {
+    font-size: 40px;
+    color: #fff;
+    font-family:'Ubuntu', sans-serif;
+}
+
+#name {
+    font-size: 80px;
+    padding-top: 50px;
+    color: #fff;
+    font-family:'Ubuntu', sans-serif;
+}
+
+/* about me */
+#content {
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+.column-a {
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+    padding-left: 110px;
+}
+
+.column-b {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    padding-right: 85px;
+}
+
+.column {
+    position: absolute;
+}
+
+.columns-container {
+  position:relative;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes bounce {
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+#img-resize {
+    max-width:100%;
+    max-height:90%;
+    border-radius: 10px;
+    opacity: 0.8;
+    animation: bounce 0.45s cubic-bezier(0.42, 0, 0.7, 0.5) 0s infinite alternate;
+}
+
+h2 {
+    font-family:'Ubuntu', sans-serif;
+    font-size: 25pt;
+}
+
+/* work */
+.grid-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 32px;
+}
+
+.grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.grid-item-wrapper:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.grid-item-wrapper:hover {
+  transform: scale(1.03, 1.03);
+}
+
+/* for responsive grid */
+.grid-item {
+    height: 300px;
+    width: 300px;
+    flex-basis: 33%;
+    -ms-flex: auto;
+    position: relative;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* style the boxes */
+.grid-item-wrapper {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+    background-color: #88a0a8;
+    border-radius: 8px;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* styling */
+.grid-item-content {
+    padding: 25px 25px 25px 25px;
+    font-family:'Ubuntu', sans-serif;
+    opacity: 1;
+    color: #fff;
+}
+
+.grid-item-content:hover {
+    opacity: 1;
+}
+
+.grid-item-wrapper:hover {
+    opacity: 0.9;
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
+}
+
+.item-title {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.item-title, .item-date, .item-excerpt:hover {
+    opacity: 1;
+}
+
+.item-date {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.item-excerpt {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+@media(max-width: 1333px) {
+  .grid-item {
+    flex-basis: 33.33%;
+  }
+}
+
+@media(max-width: 1073px) {
+   .grid-item {
+    flex-basis: 33.33%;
+  }
+}
+
+@media(max-width: 815px) {
+  .grid-item {
+    flex-basis: 50%;
+  }
+}
+
+@media(max-width: 555px) {
+  .grid-item {
+    flex-basis: 100%;
+  }
+}
+
+/* footer */
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    position:fixed;
+    background-color: #fff;
+}
+
+.footer-section {
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+footer ul {
+    overflow-x:hidden;
+    white-space:nowrap; 
+    height: 1em;
+    width: 100%;
+}
+
+footer li {
+    display: inline-block;
+}
+
+.footer-item {
+    padding-right: 25px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff
+}
+
+.footer-item a:hover, a:focus, a:active, a:visited, a:link{
+    text-decoration: none !important;
+}
+
+.footer-item a:visited{
+    color: #000;
+}
+
+.footer-item a:hover{
+    color: #88a0a8;
+}
+
+p b {
+    color: #88a0a8;
+}
